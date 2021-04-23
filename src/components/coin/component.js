@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { numberWithCommas } from '../../utils/format'
+
 class Coin extends Component {
   render() {
     return (
@@ -34,19 +36,29 @@ class Coin extends Component {
           </div>
         </td>
         <td>
-          <div>${this.props.current_price}</div>
+          <div>${numberWithCommas(this.props.current_price)}</div>
         </td>
         <td>
-          <div>{this.props.price_change_percentage_7d_in_currency?.toFixed(2)}%</div>
+          <div>
+            {numberWithCommas(
+              this.props.price_change_percentage_7d_in_currency?.toFixed(2)
+            )}
+            %
+          </div>
         </td>
         <td>
-          <div>{this.props.price_change_percentage_24h_in_currency?.toFixed(2)}%</div>
+          <div>
+            {numberWithCommas(
+              this.props.price_change_percentage_24h_in_currency?.toFixed(2)
+            )}
+            %
+          </div>
         </td>
         <td>
-          <div>${this.props.total_volume}</div>
+          <div>${numberWithCommas(this.props.total_volume)}</div>
         </td>
         <td>
-          <div>${this.props.market_cap}</div>
+          <div>${numberWithCommas(this.props.market_cap)}</div>
         </td>
       </tr>
     )

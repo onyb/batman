@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { numberWithCommas } from '../../utils/format'
+
 class WatchList extends Component {
   render() {
     return (
@@ -52,7 +54,7 @@ class WatchListEntry extends React.Component {
           <div>{this.props.name}</div>
         </td>
         <td>
-          <div>${this.props.current_price}</div>
+          <div>${numberWithCommas(this.props.current_price)}</div>
         </td>
       </tr>
     )
