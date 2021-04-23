@@ -3,7 +3,13 @@ import React, { Component } from 'react'
 import Coin from '../coin'
 
 class Coins extends Component {
+  componentDidMount() {
+    this.props.fetchCoins()
+    setInterval(() => this.props.fetchCoins(), 10000)
+  }
+
   render() {
+    console.log(this.props)
     return (
       <div className="coins-container">
         <table>
@@ -12,20 +18,17 @@ class Coins extends Component {
               <th />
               <th>#</th>
               <th>Coin</th>
-              <th>Ticker</th>
               <th>Price</th>
-              <th>1h</th>
               <th>24h</th>
               <th>7d</th>
               <th>24h Volume</th>
               <th>Market Cap</th>
-              <th>Last 7 days</th>
             </tr>
           </thead>
           <tbody>
-            <Coin />
-            <Coin />
-            <Coin />
+            {this.props.coins.map(coin => (
+              <Coin {...coin} />
+            ))}
           </tbody>
         </table>
       </div>

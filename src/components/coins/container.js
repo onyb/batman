@@ -1,11 +1,14 @@
 import { connect } from 'react-redux'
 
-import Component from './component'
+import Coins from './component'
+import { fetchCoins } from './actions'
 
 const mapStateToProps = state => ({
-  coins: state.coins,
+  coins: state.coins.coins,
 })
 
-const mapDispatchToProps = dispatch => ({})
+const mapDispatchToProps = dispatch => ({
+  fetchCoins: () => dispatch(fetchCoins()),
+})
 
-export default connect(mapStateToProps, mapDispatchToProps)(Component)
+export default connect(mapStateToProps, mapDispatchToProps)(Coins)

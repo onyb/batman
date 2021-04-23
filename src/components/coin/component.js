@@ -10,35 +10,30 @@ class Coin extends Component {
           </label>
         </td>
         <td>
-          <span>1</span>
+          <span>{this.props.market_cap_rank}</span>
         </td>
 
         <td>
-          <span>Bitcoin</span>
+          <div>
+            <img src={this.props.image} style={{ width: '30px' }} />
+            <span className="coin-name">{this.props.name}</span>
+            <span className="coin-ticker">{this.props.symbol?.toUpperCase()}</span>
+          </div>
         </td>
         <td>
-          <span>BTC</span>
+          <div>${this.props.current_price}</div>
         </td>
         <td>
-          <span>$49,821.97</span>
+          <div>{this.props.price_change_percentage_7d_in_currency?.toFixed(2)}%</div>
         </td>
         <td>
-          <span>-0.4%</span>
+          <div>{this.props.price_change_percentage_24h_in_currency?.toFixed(2)}%</div>
         </td>
         <td>
-          <span>7.89%</span>
+          <div>${this.props.total_volume}</div>
         </td>
         <td>
-          <span>20.89%</span>
-        </td>
-        <td>
-          <span>$75,495,200,735</span>
-        </td>
-        <td>
-          <span>$972,051,745,853</span>
-        </td>
-        <td>
-          <span>Charts</span>
+          <div>${this.props.market_cap}</div>
         </td>
       </tr>
     )
