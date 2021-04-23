@@ -2,7 +2,11 @@
 
 Batman is a bare-bones cryptocurrency price and market cap tracker. It sources market data from [CoinGecko](https://www.coingecko.com).
 
-**Demo:** https://xenodochial-boyd-a859c5.netlify.ap
+**Demo:** https://xenodochial-boyd-a859c5.netlify.app
+
+<p align="center">
+  <img width="768" src="https://user-images.githubusercontent.com/3684187/115841015-a2a9ab00-a41c-11eb-80fd-cc22894e418d.png">
+</p>
 
 ## Features
 
