@@ -4,12 +4,11 @@ import Coin from '../coin'
 
 class Coins extends Component {
   componentDidMount() {
-    this.props.fetchCoins()
-    setInterval(() => this.props.fetchCoins(), 10000)
+    this.props.fetchCoins(this.props.preferences.page)
+    setInterval(() => this.props.fetchCoins(this.props.preferences.page), 5000)
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="coins-container">
         <table>

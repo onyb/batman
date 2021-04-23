@@ -5,10 +5,11 @@ import { fetchCoins } from './actions'
 
 const mapStateToProps = state => ({
   coins: state.coins.coins,
+  preferences: state.preferences,
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchCoins: () => dispatch(fetchCoins()),
+  fetchCoins: page => dispatch(fetchCoins(page)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Coins)

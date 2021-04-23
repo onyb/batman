@@ -10,7 +10,7 @@ class Coin extends Component {
           </label>
         </td>
         <td>
-          <span>{this.props.market_cap_rank}</span>
+          <div>{this.props.market_cap_rank}</div>
         </td>
 
         <td>
