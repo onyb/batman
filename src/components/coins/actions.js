@@ -16,3 +16,13 @@ export const loadCoins = coins => ({
   type: 'COINS.LOAD',
   data: coins,
 })
+
+export const watchCoin = coin => ({
+  type: 'PREFERENCES.WATCH_COIN',
+  data: coin,
+})
+
+export const unwatchCoin = coin => ({
+  type: 'PREFERENCES.UNWATCH_COIN',
+  data: coin,
+})

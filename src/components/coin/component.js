@@ -6,7 +6,20 @@ class Coin extends Component {
       <tr className="coin">
         <td>
           <label>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              checked={this.props.watching}
+              onChange={() => {
+                const coin = {
+                  id: this.props.id,
+                  name: this.props.name,
+                  current_price: this.props.current_price,
+                  market_cap_rank: this.props.market_cap_rank,
+                }
+
+                this.props.watching ? this.props.unwatch(coin) : this.props.watch(coin)
+              }}
+            />
           </label>
         </td>
         <td>

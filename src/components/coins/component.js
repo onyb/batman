@@ -26,7 +26,14 @@ class Coins extends Component {
           </thead>
           <tbody>
             {this.props.coins.map(coin => (
-              <Coin {...coin} />
+              <Coin
+                {...coin}
+                watching={this.props.preferences.watchlist
+                  .map(e => e.id)
+                  .includes(coin.id)}
+                watch={this.props.watchCoin}
+                unwatch={this.props.unwatchCoin}
+              />
             ))}
           </tbody>
         </table>

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Coins from './component'
-import { fetchCoins } from './actions'
+import { fetchCoins, watchCoin, unwatchCoin } from './actions'
 
 const mapStateToProps = state => ({
   coins: state.coins.coins,
@@ -10,6 +10,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchCoins: page => dispatch(fetchCoins(page)),
+  watchCoin: coin => dispatch(watchCoin(coin)),
+  unwatchCoin: coin => dispatch(unwatchCoin(coin)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Coins)
