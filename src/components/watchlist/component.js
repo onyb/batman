@@ -16,7 +16,7 @@ class WatchList extends Component {
             {[...this.props.preferences.watchlist]
               .sort((a, b) => a.market_cap_rank - b.market_cap_rank)
               .map(coin => (
-                <WatchListEntry {...coin} />
+                <WatchListEntry {...coin} unwatch={this.props.unwatchCoin} />
               ))}
           </tbody>
         </table>
@@ -31,7 +31,20 @@ class WatchListEntry extends React.Component {
       <tr className="coin">
         <td>
           <label>
-            <input type="checkbox" checked={true} />
+            <input
+              type="checkbox"
+              checked={true}
+              onChange={() => {
+                const coin = {
+                  id: this.props.id,
+                  name: this.props.name,
+                  current_price: this.props.current_price,
+                  market_cap_rank: this.props.market_cap_rank,
+                }
+
+                this.props.unwatch(coin)
+              }}
+            />
           </label>
         </td>
 
