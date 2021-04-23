@@ -43,9 +43,8 @@ code {
     padding-top: 3px;
   }
 
-
   .coin td div {
-    @apply text-gray-700 px-6 py-3 flex items-center
+    @apply text-sm font-normal px-6 py-3 flex items-center
   }
 
   .coins-container {
