@@ -5,10 +5,10 @@ import Coin from '../coin'
 class Coins extends Component {
   render() {
     return (
-      <div className="coins-container" style={{ height: '405px' }}>
+      <div className="coins-container">
         <table>
           <thead>
-            <tr class="text-left">
+            <tr>
               <th />
               <th>#</th>
               <th>Coin</th>

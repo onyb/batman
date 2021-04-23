@@ -41,8 +41,16 @@ code {
     @apply overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative
   }
 
+  .coins-container {
+    height: 405px;
+  }
+
   .coins-container table {
     @apply border-collapse table-auto w-full whitespace-nowrap bg-white relative
+  }
+
+  .coins-container table thead tr {
+    @apply text-center
   }
 
   .coins-container table th {
