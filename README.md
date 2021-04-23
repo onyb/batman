@@ -5,7 +5,7 @@ Batman is a bare-bones cryptocurrency price and market cap tracker. It sources m
 **Demo:** https://xenodochial-boyd-a859c5.netlify.app
 
 <p align="center">
-  <img width="768" src="https://user-images.githubusercontent.com/3684187/115841015-a2a9ab00-a41c-11eb-80fd-cc22894e418d.png">
+  <img width="768" src="https://user-images.githubusercontent.com/3684187/115843419-1c429880-a41f-11eb-8610-1a1fe54097e3.png">
 </p>
 
 ## Features
